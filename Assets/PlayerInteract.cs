@@ -17,7 +17,7 @@ public class PlayerInteract : MonoBehaviour
 {
     public float interactRange = 2f;
     public GameObject hint;
-    private bool showUI = false;
+    private bool showHint = false;
 
     public TMP_Text text;
     public Task task;
@@ -32,8 +32,8 @@ public class PlayerInteract : MonoBehaviour
 
     void Update()
     {
-        showUI = false;
-        if (!showUI)
+        showHint = false;
+        if (!showHint)
         {
             hint.SetActive(false);
         }
@@ -44,7 +44,7 @@ public class PlayerInteract : MonoBehaviour
             if (collider.TryGetComponent(out HHintable hintable))
             {
                 hintable.Hint(hint, text);
-                showUI = true;
+                showHint = true;
             }
         }
 
