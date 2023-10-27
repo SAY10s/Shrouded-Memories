@@ -17,6 +17,9 @@ public class PlayerInteract : MonoBehaviour
 {
     public float interactRange = 2f;
     public GameObject hint;
+    public GameObject czytaj;
+
+
     private bool showHint = false;
 
     public TMP_Text text;
@@ -57,6 +60,11 @@ public class PlayerInteract : MonoBehaviour
                     interactable.Interact();
                 }
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log(colliderArray.Length);
+            czytaj.SetActive(false);
         }
     }
 }

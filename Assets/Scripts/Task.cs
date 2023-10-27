@@ -7,6 +7,8 @@ public class Task : MonoBehaviour
 {
     public TMP_Text tasks;
     public TMP_Text cc;
+    public TMP_Text longText;
+    public TMP_Text title;
 
     public void updateTask(string taskText)
     {
@@ -15,5 +17,14 @@ public class Task : MonoBehaviour
 
     public void subtitles(string taskText) {
         cc.SetText(taskText);
+    }
+
+    public void updateLongText(string text)
+    {
+        longText.SetText(text);
+    }
+    public void updateTitlet(string text)
+    {
+        title.SetText(text);
     }
 }
