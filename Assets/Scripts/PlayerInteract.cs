@@ -61,7 +61,7 @@ public class PlayerInteract : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log(colliderArray.Length);
             czytaj.SetActive(false);

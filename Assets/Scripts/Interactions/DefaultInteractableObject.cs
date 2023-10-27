@@ -19,5 +19,6 @@ public class DefaultInteractableObject : MonoBehaviour, IInteractable, HHintable
     public void Interact()
     {
         Task.updateTask("Dokonano interakcji");
+       
     }
 }
