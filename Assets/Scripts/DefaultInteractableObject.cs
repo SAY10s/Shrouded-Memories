@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Knfie : MonoBehaviour, IInteractable, HHintable
+public class DefaultInteractableObject : MonoBehaviour, IInteractable, HHintable
 {
     private bool showHint = false;
     public Task task;
@@ -13,13 +13,12 @@ public class Knfie : MonoBehaviour, IInteractable, HHintable
         if(!showHint)
         {
             uiObject.SetActive(true);
-            text.SetText("Wcisnij 'e' aby podniesc noz");
+            text.SetText("e: ");
         }
     }
 
     public void Interact()
     {
-        task.updateTask("Zakończ testy");
-        Debug.Log("Interakcja!");
+        task.updateTask("Dokonano interakcji");
     }
 }

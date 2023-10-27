@@ -26,7 +26,6 @@ public class PlayerInteract : MonoBehaviour
     public void Start()
     {
         //FindObjectOfType<AudioMenager>().Play("Insane");
-        Debug.Log("TASK: Rozejrzyj sie po domu");
         hint.SetActive(false);
     }
 
