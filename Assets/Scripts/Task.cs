@@ -9,6 +9,7 @@ public class Task : MonoBehaviour
     public TMP_Text cc;
     public TMP_Text longText;
     public TMP_Text title;
+    public GameObject Czytaj;
 
     public void updateTask(string taskText)
     {
@@ -26,5 +27,10 @@ public class Task : MonoBehaviour
     public void updateTitlet(string text)
     {
         title.SetText(text);
+    }
+    public void showCzytaj()
+    {
+        Czytaj.SetActive(true);
+        Time.timeScale = 0;
     }
 }

@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Czytaj : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public TMP_Text tasks;
+    public TMP_Text cc;
+
+    public void updateTask(string taskText)
     {
-        
+        tasks.SetText(taskText);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void subtitles(string taskText)
     {
-        
+        cc.SetText(taskText);
     }
 }

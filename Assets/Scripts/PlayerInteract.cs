@@ -65,6 +65,7 @@ public class PlayerInteract : MonoBehaviour
         {
             Debug.Log(colliderArray.Length);
             czytaj.SetActive(false);
+            Time.timeScale = 1;
         }
     }
 }
