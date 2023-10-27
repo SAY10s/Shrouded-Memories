@@ -5,32 +5,39 @@ using UnityEngine;
 
 public class Task : MonoBehaviour
 {
+    public static Task singleton;
+    private void Awake()
+    {
+        singleton = this;
+    }
+
+
     public TMP_Text tasks;
     public TMP_Text cc;
     public TMP_Text longText;
     public TMP_Text title;
     public GameObject Czytaj;
 
-    public void updateTask(string taskText)
+    public static void updateTask(string taskText)
     {
-        tasks.SetText(taskText);
+        singleton.tasks.SetText(taskText);
     }
 
-    public void subtitles(string taskText) {
-        cc.SetText(taskText);
+    public static void subtitles(string taskText) {
+        singleton.cc.SetText(taskText);
     }
 
-    public void updateLongText(string text)
+    public static void updateLongText(string text)
     {
-        longText.SetText(text);
+        singleton.longText.SetText(text);
     }
-    public void updateTitlet(string text)
+    public static void updateTitlet(string text)
     {
-        title.SetText(text);
+        singleton.title.SetText(text);
     }
-    public void showCzytaj()
+    public static void showCzytaj()
     {
-        Czytaj.SetActive(true);
+        singleton.Czytaj.SetActive(true);
         Time.timeScale = 0;
     }
 }

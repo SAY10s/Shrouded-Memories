@@ -6,7 +6,6 @@ using UnityEngine;
 public class DefaultInteractableObject : MonoBehaviour, IInteractable, HHintable
 {
     private bool showHint = false;
-    public Task task;
   
     public void Hint(GameObject uiObject, TMP_Text text)
     {
@@ -19,6 +18,6 @@ public class DefaultInteractableObject : MonoBehaviour, IInteractable, HHintable
 
     public void Interact()
     {
-        task.updateTask("Dokonano interakcji");
+        Task.updateTask("Dokonano interakcji");
     }
 }
