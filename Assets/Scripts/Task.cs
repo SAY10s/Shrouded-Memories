@@ -27,10 +27,6 @@ public class Task : MonoBehaviour
         singleton.cc.SetText(taskText);
     }
 
-    public static void updateLongText(string text)
-    {
-        singleton.longText.SetText(text);
-    }
     public static void updateTitlet(string text)
     {
         singleton.title.SetText(text);
@@ -40,4 +36,19 @@ public class Task : MonoBehaviour
         singleton.Czytaj.SetActive(true);
         Time.timeScale = 0;
     }
+    public static void longTextCenter(string text)
+    {
+        singleton.longText.SetText(text);
+        singleton.longText.alignment = TextAlignmentOptions.Center;
+        singleton.longText.alignment = TextAlignmentOptions.Top;
+    }
+    public static void longTextJustify(string text)
+    {
+        singleton.longText.SetText(text);
+        singleton.longText.alignment = TextAlignmentOptions.Justified;
+        singleton.longText.alignment = TextAlignmentOptions.Top;
+
+    }
+
+
 }

@@ -19,7 +19,7 @@ public class Niesmiertelnik : MonoBehaviour, IInteractable, HHintable
     public void Interact()
     {
         Task.showCzytaj();
+        Task.longTextCenter("Nikodem \n Majzner \n 01.05.2005 - ");
         Task.updateTitlet("Nieśmiertelnik");
-        Task.updateLongText("Nikodem \n Majzner \n 01.05.2005 - ");
     }
 }
